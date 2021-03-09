@@ -44,6 +44,7 @@ func main() {
 	static.Static("/angular", "node_modules/angular")
 	static.Static("/fortawesome", "node_modules/@fortawesome/fontawesome-free/css")
 	static.Static("/fortawesomejs", "node_modules/@fortawesome/fontawesome-free/js")
+	static.Static("/webfonts", "node_modules/@fortawesome/fontawesome-free/webfonts")
 
 	r.Run("0.0.0.0:8080")
 }
