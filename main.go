@@ -14,7 +14,7 @@ func main() {
 		c.Header("Access-Control-Allow-Origin", "*")
 		c.Header("Access-Control-Allow-Methods", "*")
 		c.Header("Access-Control-Allow-Headers", "*")
-		c.Header("Content-Type", "application/json")
+		// c.Header("Content-Type", "application/json")
 		// Second, we handle the OPTIONS problem
 		if c.Request.Method != "OPTIONS" {
 			c.Next()
