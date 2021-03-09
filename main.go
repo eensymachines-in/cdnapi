@@ -14,7 +14,7 @@ func main() {
 		c.Header("Access-Control-Allow-Origin", "*")
 		c.Header("Access-Control-Allow-Methods", "*")
 		c.Header("Access-Control-Allow-Headers", "*")
-		c.Header("Cache-Control", "public, max-age=31536000")
+		// c.Header("Cache-Control", "public, max-age=31536000")
 		// c.Header("Content-Type", "application/json")
 		// Second, we handle the OPTIONS problem
 		if c.Request.Method != "OPTIONS" {
@@ -35,6 +35,7 @@ func main() {
 	// mapping all the popular css and js statics onto a static route
 	// https://developers.google.com/web/fundamentals/performance/get-started/httpcaching-6
 	// https://stackoverflow.com/questions/40714934/why-does-this-request-return-a-200from-cache-yet-others-return-304
+	// https://github.com/gin-gonic/gin/issues/1222
 	static := r.Group("/static")
 	static.Static("/jquery", "node_modules/jquery/dist")
 	static.Static("/popper", "node_modules/popper.js/dist")
